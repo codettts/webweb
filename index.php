@@ -12,6 +12,7 @@ $result= pg_query($dbconn, "SELECT * FROM tbl_user");
 while ($row=pg_fetch_row($result)) {
 	if ($row[0]==$username && $row[1]==$password) {
 		echo "Hello Admin";
+		header('location:.php')
 	}else{
 		echo "";
 	}
